@@ -27,3 +27,5 @@
 - mask esacci to vegtype and threshold and make unstructurd: mask_esacci.sh
 - make python arrays per year for lai and fc based on esacci mask: final_arrays.py
 - run fitting and make plots: run_fitting.ipynb
+
+final fitting: lai_fcover_fitting_1km_final.tar.gz including 1km data, unstructured grids, esacci masks and output arrays -> ECFS
