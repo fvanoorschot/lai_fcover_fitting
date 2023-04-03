@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pathos.threading import ThreadPool as Pool
 
-def yearly_arrays(vt,year,sample_size=1000):
+def yearly_arrays(vt,year,sample_size=2000):
     if (vt==1) or (vt==2) or (vt==6) or (vt==9):
         th=format(0.90, ".2f")
     if (vt==3):
@@ -51,10 +51,10 @@ def yearly_arrays(vt,year,sample_size=1000):
     lat_ar = np.delete(lat_ar,ab)
     lon_ar = np.delete(lon_ar,ab)
         
-    np.save(f'{fol}/output/yearly_arrays/x_{year}_{vt}_{th}.npy',lai_ar)
-    np.save(f'{fol}/output/yearly_arrays/y_{year}_{vt}_{th}.npy',fc_ar)
-    np.save(f'{fol}/output/yearly_arrays/lat_{year}_{vt}_{th}.npy',lat_ar)
-    np.save(f'{fol}/output/yearly_arrays/lon_{year}_{vt}_{th}.npy',lon_ar)
+    np.save(f'{fol}/output/yearly_arrays_2000/x_{year}_{vt}_{th}.npy',lai_ar)
+    np.save(f'{fol}/output/yearly_arrays_2000/y_{year}_{vt}_{th}.npy',fc_ar)
+    np.save(f'{fol}/output/yearly_arrays_2000/lat_{year}_{vt}_{th}.npy',lat_ar)
+    np.save(f'{fol}/output/yearly_arrays_2000/lon_{year}_{vt}_{th}.npy',lon_ar)
     
 # make lists for parallel computation
 year_l = [2013,2014,2015,2016,2017,2018,2019]#2006,2007,2008,2009,2010,2011,2012]
